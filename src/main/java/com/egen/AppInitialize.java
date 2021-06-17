@@ -1,6 +1,6 @@
 package com.egen;
 
-//import com.sun.istack.internal.Nullable;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class AppInitialize extends AbstractAnnotationConfigDispatcherServletInitializer{
@@ -8,7 +8,7 @@ public class AppInitialize extends AbstractAnnotationConfigDispatcherServletInit
   // @Nullable
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] {AppConfig.class};
+		return new Class[] {AppConfig.class,JPAConfig.class};
 
 	}
    // @Nullable

@@ -1,13 +1,20 @@
 package com.egen.model;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.UUID;
 
+
+@Entity
 public class Shipping {
 
    //e. supports more shipping/delivery methods: In-store pickup, curbside delivery,
     //	ship to home, 3rd party delivery etc.
 
+   @Id
+     @Column(name="Shipping_Details")
     private String shippingId;
 
     private String shippingAddress1;
@@ -73,6 +80,24 @@ public class Shipping {
         return shippingZip;
     }
 }
+
+    @Override
+    public String toString() {
+        return "ShippingDetails {" +
+                "shippingtId='" +  shippingId + '\'' + "," +
+                "ShippingAddress1='" +shippingAddress1+ '\'' +
+                "ShippingAddress2='" +shippingAddress2+ '\'' +
+                "ShippingCity='" +shippingCity+ '\'' +
+                "ShippingState='" +shippingState+ '\'' +
+                "ShippingZip='" +shippingZip+ '\'' +
+                '}';
+    }
+        }
+
+
+
+
+
 
 
 

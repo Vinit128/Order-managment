@@ -67,11 +67,18 @@ public class OrderDetails {
         return order_id;
     }
 
-    private float order_subtotal;
-    private float order_tax;
-    private float order_shipping_charges;
-    private float order_total;
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "order_item_name='" + order_item_name + '\'' +
 
+                ", order_item_qty='" + order_item_qty + '\'' +
+                ", order_total='" + order_total + '\'' +
+                ", order_id='" + order_id + '\'' +
+                " order_subtotal='" + order_subtotal + '\'' +
+                ", order_tax='" + order_tax + '\'' +
+                ", order_shipping_charges='" + order_shipping_charges + '\'' +
+                '}';
 
-
+    }
 }
