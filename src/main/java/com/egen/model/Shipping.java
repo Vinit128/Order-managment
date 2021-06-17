@@ -32,6 +32,10 @@ public class Shipping {
         this.shippingZip = shippingZip;
     }
 
+    public Shipping() {
+        this.shippingId= UUID.randomUUID().toString();
+    }
+
     public void setShippingId(String shippingId) {
         this.shippingId = shippingId;
     }
@@ -79,7 +83,6 @@ public class Shipping {
     public String getShippingZip() {
         return shippingZip;
     }
-}
 
     @Override
     public String toString() {
@@ -92,16 +95,12 @@ public class Shipping {
                 "ShippingZip='" +shippingZip+ '\'' +
                 '}';
     }
-        }
 
+    enum Shipping_Type {
+        INSTORE ,CURBSIDE, SHIP_HOME,OTHERPARTY ;
 
-
-
-
-
-
-
-public enum Shipping_Type {
-    INSTORE ,CURBSIDE, SHIP_HOME,OTHERPARTY ;
-
+    }
 }
+
+
+

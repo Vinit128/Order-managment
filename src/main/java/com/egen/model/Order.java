@@ -17,12 +17,6 @@ public class Order {
     public String OrderStatus;
     public String Returnpolicy;
 
-
-
-    public Order(String id){
-        this.id = id;
-    }
-
     public Order(Date createdDate, Date modifiedDate, String orderStatus, String returnpolicy) {
         this.createdDate = createdDate;
         this.modifiedDate = modifiedDate;
@@ -32,6 +26,11 @@ public class Order {
     public Order(String id){
         this.id = id;
     }
+
+    public Order() {
+
+    }
+
     public String getId() {
         return id;
     }

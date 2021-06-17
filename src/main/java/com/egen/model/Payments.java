@@ -29,7 +29,9 @@ public class Payments{
         this.order_payment_confirmation_number = order_payment_confirmation_number;
     }
 
-
+    public Payments() {
+        this.order_id= UUID.randomUUID().toString();
+    }
 
     public void setOrder_total(float order_total) {
         this.order_total = order_total;
@@ -70,7 +72,6 @@ public class Payments{
     public String getOrder_payment_confirmation_number() {
         return order_payment_confirmation_number;
     }
-}
 
     @Override
     public String toString() {
@@ -82,8 +83,12 @@ public class Payments{
                 ", order_id='" + order_id + '\'' +
                 '}';
 
-    }}
-        private enum Payments {
-            AMAZONPAY, CREDIT_CARD, DEBIT_CARD, GOOGLEPAY, PAYPAL
+    }
 
-        }
+    enum Payment {
+        AMAZONPAY, CREDIT_CARD, DEBIT_CARD, GOOGLEPAY, PAYPAL
+
+    }
+}
+
+
