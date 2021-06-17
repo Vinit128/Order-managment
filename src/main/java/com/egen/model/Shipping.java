@@ -1,7 +1,9 @@
 package com.egen.model;
 
 
-public class Shiping {
+import java.util.UUID;
+
+public class Shipping {
 
    //e. supports more shipping/delivery methods: In-store pickup, curbside delivery,
     //	ship to home, 3rd party delivery etc.
@@ -13,6 +15,15 @@ public class Shiping {
     private String shippingCity;
     private String shippingState;
     private String shippingZip;
+
+    public Shipping(String shippingAddress1, String shippingAddress2, String shippingCity, String shippingState, String shippingZip) {
+        this.shippingId= UUID.randomUUID().toString(); // a randon 32 bit UUID is generated
+        this.shippingAddress1 = shippingAddress1;
+        this.shippingAddress2 = shippingAddress2;
+        this.shippingCity = shippingCity;
+        this.shippingState = shippingState;
+        this.shippingZip = shippingZip;
+    }
 
     public void setShippingId(String shippingId) {
         this.shippingId = shippingId;
@@ -65,10 +76,7 @@ public class Shiping {
 
 
 
-
-
-
-public enum Shipping {
+public enum Shipping_Type {
     INSTORE ,CURBSIDE, SHIP_HOME,OTHERPARTY ;
 
 }

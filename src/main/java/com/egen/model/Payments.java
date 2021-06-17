@@ -1,5 +1,7 @@
 package com.egen.model;
 import java.util.Date;
+import java.util.UUID;
+
 public class Payments{
  //   c. provides an ability to pay the order by accepting more than one payment
    // transactions. For example, pay for an order amount using two credit cards (split
@@ -12,6 +14,14 @@ public class Payments{
     private String order_payment_method;
     private Date order_payment_date;
     private String order_payment_confirmation_number;
+
+    public Payments(String order_payment_method, Date order_payment_date, String order_payment_confirmation_number) {
+        this.orderid= UUID.randomUUID().toString();
+        this.order_payment_method = order_payment_method;
+        this.order_payment_date = order_payment_date;
+        this.order_payment_confirmation_number = order_payment_confirmation_number;
+        this.order_total=order_total;
+    }
 
     public void setOrder_total(float order_total) {
         this.order_total = order_total;

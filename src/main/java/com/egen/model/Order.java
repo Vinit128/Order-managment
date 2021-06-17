@@ -4,6 +4,17 @@ import java.util.Date;
 
 public class Order {
     private  String id;
+    public Date createdDate;
+    public Date modifiedDate;
+    public String OrderStatus;
+    public String Returnpolicy;
+
+    public Order(Date createdDate, Date modifiedDate, String orderStatus, String returnpolicy) {
+        this.createdDate = createdDate;
+        this.modifiedDate = modifiedDate;
+        OrderStatus = orderStatus;
+        Returnpolicy = returnpolicy;
+    }
 
     public Order(String id){
         this.id = id;
@@ -17,10 +28,6 @@ public class Order {
         this.id = id;
     }
 
-    public Date createdDate;
-    public Date modifiedDate;
-    public String OrderStatus;
-    public String Returnpolicy;
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
